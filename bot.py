@@ -50,9 +50,8 @@ def who(update, context):
     '''Return a random result from the page.'''
     updateData()
 
-    update.message.reply_text(soup[randint(0, len(soup))].text)
+    update.message.reply_text(soup[randint(0, len(soup)-1)].text)
     print("Someone called this bot.")
-    print(today)
 
 
 def error(update, context):
